@@ -1,3 +1,4 @@
+<!--important topic-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Property</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
         header{
-            margin: auto;
+            
             border: 2px solid black;
-            width: 100%;
+            margin: auto;
+            width: 1200px;
+           
         }
         img{
             width:30 px;
@@ -20,6 +26,19 @@
             text-align: center;
             font-family: 'Times New Roman', Times, serif;
         }
+        .box{
+            border: 4px solid black;
+            background-color: gray;
+            margin-top: 5px;
+            padding: 2px;
+            display: inline-block;
+            width: 33%;
+            box-sizing: border-box;
+        }
+        .container{
+            margin: auto;
+            width: 1200px;
+        }
     </style>
 </head>
 <body>
@@ -27,6 +46,20 @@
         <img src="/image/download.jpg">
         <h3>Welcome</h3>
     </header>
+    <div class="container">
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt dolore mollitia explicabo eveniet quas perferendis soluta, minus dolorum cumque perspiciatis porro amet, necessitatibus non quo iste! Cupiditate expedita dolor voluptatem, quas reprehenderit architecto quos molestias assumenda provident debitis quisquam dolores sit nesciunt porro in!</p>
+        </div>
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt dolore mollitia explicabo eveniet quas perferendis soluta, minus dolorum cumque perspiciatis porro amet, necessitatibus non quo iste! Cupiditate expedita dolor voluptatem, quas reprehenderit architecto quos molestias assumenda provident debitis quisquam dolores sit nesciunt porro in!</p>
+        </div>
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt dolore mollitia explicabo eveniet quas perferendis soluta, minus dolorum cumque perspiciatis porro amet, necessitatibus non quo iste! Cupiditate expedita dolor voluptatem, quas reprehenderit architecto quos molestias assumenda provident debitis quisquam dolores sit nesciunt porro in!</p>
+        </div>
+    </div>
     
 </body>
 </html>

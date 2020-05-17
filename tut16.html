@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox tut</title>
+    <style>
+        .cointainer{
+            height: 500px;
+            width: 100%;
+            border: 2px solid black;
+            /* initilize a cointainer as flex */
+            display: flex;
+            /* flex properies for flex cointainer*/
+
+             /* flex-direction: row; */
+             /* row is by default */
+             /* flex-direction: column; */
+            /*flex-direction: row-reverse;
+            flex-direction: column-reverse;*/ 
+             /* flex-wrap: wrap;  */
+             /* wrao means auto adjust according to row and colounm
+            flex-wrap: wrap-reverse; */
+            /*  flex-flow: row-reverse wrap;  */  /*this is the shorthand for direction and wrap*/
+
+           /* this makes the boxes justify and work in horizontal direction */
+             /* justify-content: center;
+            /* space between boxs are equal irrespactive of intal and final postion */
+             /*justify-content: space-between;*/ 
+            /* space between boxes equal from intal to last */
+             /* justify-content: space-evenly; */ 
+             /* left and right side space of one box equal  */
+             /*justify-content: space-around;  */
+
+             /* this makes the box align  in vartical direction */
+
+             /* align-items: center; */
+             /* align-items: flex-end; */
+             /* align-items: flex-start; */
+             /* align-items: stretch; */
+
+
+
+        }
+        .item{
+           background-color: tomato;
+           
+           border: 2px solid green;
+           margin: 10px ;
+           padding: 5px;
+           width: 150px;
+           height: 150px;
+        }
+        #item-1{
+            /* higher the order leter it will show */
+           /* order: 2; */
+           /* flex-grow: it will increase the breadth of the box */ 
+           /* flex-grow: 5; */
+           /* when page is minnimizing the ratio of decreasing that box is greater  */
+           /* flex-shrink: 2; */
+           /* flex-basis: 200px; */
+
+        }
+        #item-2{
+            /* order: 5; */
+            /* flex-shrink: 3; */
+            /* when flex direction is row it will control the width */
+            /* when flex direction is column it will control the height */
+            /* flex-basis: 300px; */
+
+            
+        }
+        #item-3{
+            /* order: 3; */
+            /* short-hand (flex-grow: flex-shrink: flex-basis: ;;) */
+            /* flex: 2 2 100px; */
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: center;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>hi thus is flexbox tutorials</h1>
+    <div class="cointainer">
+        <div class="item" id="item-1">First box1</div>
+        <div class="item" id="item-2">second box2</div>
+        <div class="item" id="item-3">third box3</div>
+        <!-- <div class="item" id="item-4">fourth box4</div>
+        <div class="item" id="item-5">fifth box5</div>
+        <div class="item" id="item-6">Sixth box6</div> -->
+    </div>
+    
+</body>
+</html>

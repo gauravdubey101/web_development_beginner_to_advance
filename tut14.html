@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css postion</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            background-color: cornflowerblue;
+            height: 2050px;
+
+            
+        }
+        /* postion:static(defult),absolute,relative */
+        .box{
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+            display: inline-block;
+            
+        }
+        /* relative:relative to its normal position(leave gap from normal postion) */
+        /* absolute: relative to parent(move from first parent) */
+        
+        #box3{
+            /* position: absolute;
+            top: 32px;
+            left: 30px; */
+            /* fixed:postion the element relative to the broswer window
+            position: fixed;
+            right: 4px; */
+            /* sticky */
+            position: sticky;
+            top: 3px;
+
+            
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box" id="box1">1</div>
+    <div class="box" id="box2">2</div>
+    <div class="box" id="box3">chat with us</div>
+    <div class="box" id="box4">4</div>
+</div>
+</body>
+</html>
