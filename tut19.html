@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selector </title>
+    <style>
+        h1{
+        background-color: red;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+
+        }
+        /* if p is contained by any li which is contained  by div  */
+       /*  div > p{
+            color: yellow;
+            font-weight: bold;
+            background-color: green;
+        } */
+        /* if p is right after div i.e is next sibling of div */
+        div +p{
+            color: blanchedalmond;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>This class is more about selectors</h1>
+    <div class="container">
+        <div class="row">
+            <p>This is a paragarph</p> 
+        </div>
+        <p>This is another paragraph</p>
+    </div>
+    <p>Thus is outer paragraph</p>
+
+    
+</body>
+</html>

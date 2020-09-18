@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css transfrom</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+
+        }
+        .container{
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: burlywood;
+
+
+        }
+        .box{
+            background: peru;
+            border: 2px solid red;
+            height: 400px;
+            width: 400px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            border: 2px solid black;
+            border-radius: 8px;   
+            transition: all 0.5s ease-in-out;
+        }
+       
+        .box:hover{
+            /* transform: rotate(360deg); */
+            /* transform: skew(45deg); */
+            /* transform: scale(3); */
+            transform: translateX(122px);
+            transform: translateY(122px);
+            transform: translate(123px,123px);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            this hatchback
+        </div>
+    </div>
+    
+</body>
+</html>
