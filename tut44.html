@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <style>
+        .container{
+            background-color: rgb(150, 15, 143);
+            border: 2px solid black;
+            padding:  34px;
+            margin-top: 300px;
+            font-size: 20px;
+            text-align: center;
+
+        }
+        #time{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Current time is <span id="time"></span>
+
+    </div>
+    
+    <script>
+         let now = new Date();
+        console.log(now); 
+
+        let dt = new Date(0); //it show standard starting time
+        console.log(dt); 
+
+         let newDates = new Date('2022-06-25') ;
+        console.log(newDates); 
+        // let newDate = new Date(year,month,date,hours,minutes,seconds,milliseconds);
+        let newDate = new Date(2022,02,04,06,02,22);
+        console.log(newDate);
+
+        let yr = newDate.getFullYear();
+        console.log("This is year :" , yr  );
+
+        let dat = newDate.getDate();
+        console.log("Date of this year is :" , dat);
+
+        let mn = newDate.getMonth();
+        console.log("Month of the year is : ",mn);
+
+        let hr = newDate.getHours();
+        console.log("The hours is : ",hr);
+
+
+        newDate.setDate(32);  //can change date time
+        console.log(newDate);
+        newDate.setMinutes(15);
+        console.log(newDate);
+
+        setInterval(updateTime,1000);
+
+        function updateTime(){
+            time.innerHTML = new Date();
+        }
+
+
+        
+
+    </script>
+    
+</body>
+</html>
