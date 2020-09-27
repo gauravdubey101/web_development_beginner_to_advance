@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Listeners</title>
+    <style>
+        #btn{
+            padding: 10px  20px;
+            background-color: darkcyan;
+            border-radius: 8px;
+            border: 2px solid black;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<!--     Browser event:
+    click
+    contextmenu
+    mouseover/mouseout
+    mousedown/mouseup
+    mousemove
+
+    sumbit
+    focus
+
+    domContentLoaded
+
+    transitionend -->
+
+    <div class="container">
+        <h1>Heading</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore assumenda atque at, ex esse, perferendis adipisci modi reiciendis molestias nobis asperiores quidem eaque perspiciatis ullam quas voluptatum eius vero id facere. Consequuntur!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa id praesentium itaque corrupti illum suscipit modi fugit inventore, ut dicta quibusdam molestias earum saepe quidem unde, voluptates nostrum sequi temporibus numquam ea aspernatur ratione quaerat impedit. Debitis tempore sint reprehenderit odit, nostrum a quaerat sapiente!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, deserunt? Doloremque alias culpa reiciendis molestias voluptate, tempora, ullam facere dolore voluptates sequi sint cumque corporis, delectus nesciunt quidem animi. Atque nemo maxime asperiores mollitia nostrum reprehenderit ut nesciunt quidem exercitationem quibusdam. Illum reprehenderit, repellat nisi at nam consectetur, quidem commodi ipsum magnam dignissimos enim dicta autem odio non voluptatem, maxime recusandae. Quis quas dolor accusantium!
+
+        </p>
+    </div>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+    <script>
+        let para = document.getElementById('para');
+        para.addEventListener('mouseover',function run(){
+            alert('mouse Inside');
+        });
+        para.addEventListener('mouseout',function run(){
+            alert('Mouse now went Outside')
+        });
+
+
+
+        function toggleHide(){
+          let  btn = document.getElementById('btn');
+          let para = document.getElementById('para');
+          if(para.style.display != 'none'){
+              para.style.display = 'none';
+          }
+          else{
+              para.style.display = 'blok';
+          }
+        }
+    </script>
+    
+</body>
+</html>
