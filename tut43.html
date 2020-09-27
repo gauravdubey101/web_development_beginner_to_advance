@@ -7,15 +7,29 @@
 </head>
 <body>
     <div class="container">
-        This setinterval and clearinterval
+        Time now is <span id="time"></span>
     </div>
     <script>
        // setTimeout -> allows us to run the function once after the interval of Time
       //  clearTimeout -> allos us to run the function repeatedly after the interval of time
-      function great(){
-          console.log("Hello good to see you");
+      function great(name, byeText){
+          console.log("Hello good to see you " + name + " " + byeText);
       } 
-      setTimeout(great,5000);
+       timeOut = setTimeout(great, 5000, "Gaurav", "Take care");
+      // clearTimeout(timeOut);
+
+      console.log(timeOut);
+      //setTimeOut(greet(),30000); --> wrong as it is calling the function inside setTimeout
+
+      /* intervalId = setInterval(great,2000,"Gaurav","stay safe");
+      clearInterval(intervalId); */
+
+      function displayTime(){
+          time = new Date();
+          console.log(time);
+          document.getElementById('time').innerHTML = time;
+      }
+      setInterval(displayTime, 1000)
     </script>
     
 </body>
