@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+    <style>
+        .container{
+         text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Arrow function lecture
+        </h1>
+    </div>
+    <script>
+        //normal function
+       /*  function greet(){
+            console.log("hey everyone")
+        }
+        greet(); */
+
+       let greet = () =>{
+            console.log("arrow function");
+        }
+
+        // let sum = (a,b)=>{
+        //     return a+b;
+        // };
+
+       let sum2 = (a,b) => a+b; //arrow functions
+       let half = a => a/2;
+        
+        greet();
+    
+
+       setTimeout(() => {
+           console.log("lets try another ways to present arrow");
+       }, 3000);
+
+       let objq ={
+           greeting:"Good moring",
+           names:["Gaurav","purohit","jatt"],
+           speak(){
+               this.names.forEach((student)=>{
+                   console.log(this.greeting + " ,Hey buddy " + student);
+               });
+           }
+       }
+       objq.speak();
+    </script>
+    
+</body>
+</html>
