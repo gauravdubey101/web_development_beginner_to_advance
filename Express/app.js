@@ -1,13 +1,23 @@
-const express = require("express")
-
+const express = require("express");
+const path = require("path");
 const app = express();
 const port = 80;
 
-//serve static filenode
+//serving static filenode
 app.use('/static',express.static('static'));
-//set the template engine as pug
 
+//set the template engine as pug
 app.set('view engine', 'pug');
+
+//set the view directory
+app.set('views', path.join(__dirname, 'views'))
+
+//set pug demo endpoint
+app.get("/demo",(req,res)=>{
+    res.status(200).render('demo',{title:'Hey everyone',message:'hello there! trying to do run pug'});
+});
+
+
 
 app.get("/",(req,res)=>{
     res.status(200).send("This is my first express app.");
