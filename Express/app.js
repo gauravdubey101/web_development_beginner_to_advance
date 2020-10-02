@@ -1,38 +1,46 @@
 const express = require("express");
+const fs = require("fs");
 const path = require("path");
 const app = express();
 const port = 80;
 
+//EXPRESS SPECIFIC 
 //serving static filenode
 app.use('/static',express.static('static'));
+app.use(express.urlencoded());
 
-//set the template engine as pug
-app.set('view engine', 'pug');
+//PUG SPECIFIC 
 
-//set the view directory
-app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'pug') //set the template engine as pug
+app.set('views', path.join(__dirname, 'views')) //set the view directory
 
-//set pug demo endpoint
-app.get("/demo",(req,res)=>{
-    res.status(200).render('demo',{title:'Hey everyone',message:'hello there! trying to do run pug'});
+
+
+//ENDPOINTS
+
+app.get('/',(req,res)=>{
+    const con = "This is the best content on internet so far";
+    const params = {'title' : 'Pubg is the best game',"content": con}
+    res.status(200).render('index.pug',params);
+});
+
+app.post('/',(req,res)=>{
+    name = req.body.name
+    age = req.body.age
+    gender = req.body.gender
+    address = req.body.address
+    more = req.body.more
+
+    let outputToWrite =    `the name of the client is ${name},${age} years old, ${gender}, residing at ${address}. More about him/her :${more}`
+    fs.writeFileSync('output.txt',outputToWrite)
+    const params = {'title':'Pubg is the best game'}
+    res.status(200).render('index.pug',params);
 });
 
 
 
-app.get("/",(req,res)=>{
-    res.status(200).send("This is my first express app.");
+//START THE SERVER
+
+app.listen(port, ()=>{
+    console.log(`The application started successfully on port ${port}`);
 });
-
-app.get("/about",(req,res)=>{
-    res.send("This is about page of  my first express app.");
-});
-
-//post method
-app.post("/about",(req,res)=>{
-    res.send("This is post request about page of  my first express app.");
-});
-
-
-app.listen(port,()=>{
-    console.log(`The application started successfully on port ${port}`)
-})
