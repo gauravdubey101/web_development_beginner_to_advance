@@ -30,7 +30,8 @@
 #navbar ul{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
+    align-items: center;
 
 }
 #navbar li{
@@ -124,7 +125,27 @@
     text-align: center;
     padding-top: 12px;
 }
+
+#sponsers{
+    height: 100px;
+    max-width: 1000px;
+    margin: auto;
+  /*   padding: 5px; */
+}
+
+.spImage{
+    height: 180px;
+    margin: 2px;
+   
+}
+
+
+
+
 #footer{
     background-color: black;
-    height: 100px;
+    height: 50px;
+    color: white;
+    text-align: center;
+     padding-top: 15px;
 }
