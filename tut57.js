@@ -10,4 +10,4 @@ db.items.find({price:8000})
 db.items.deleteOne({price:8000})
 
 //deleteOne will delete the matching document entry and will delete the first entry in case of multi document match.
-db.items.dele
+db.items.deleteMany({price:22000})
