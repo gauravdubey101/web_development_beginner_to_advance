@@ -1,0 +1,4 @@
+//Inserting data in monogo db
+
+use gauravcart
+db.item.insertOne({name:"Samsung 30s"})
